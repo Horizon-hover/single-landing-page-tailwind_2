@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+@layer base {
+  h1, h2, h3 {
+    @apply font-heading;
+  }
+  a {
+    @apply transition-colors;
+  }
+}
+
+/* Components */
+@layer components {
+  .feature-card {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+  .btn-primary {
+    @apply px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90;
+  }
+}
+
+/* Utilities */
+@layer utilities {
+  .text-shadow {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-out;
+  }
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

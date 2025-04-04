@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus | Design Systems</title>
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" as="style">
+    <link rel="preload" href="styles/main.css" as="style">
+    <link rel="preload" href="images/hero/hero-1200.webp" as="image" media="(max-width: 768px)">
+    <link rel="preload" href="images/hero/hero-1920.webp" as="image" media="(min-width: 769px)">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Local Tailwind CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <!-- Favicon (add your own) -->
+    <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
+    
+    <!-- Theme Color (for mobile browsers) -->
+    <meta name="theme-color" content="#6D28D9">
+    
+    <!-- Social Meta Tags (customize these) -->
+    <meta property="og:title" content="Nexus Design Systems">
+    <meta property="og:description" content="Professional design solutions with cutting-edge principles">
+    <meta property="og:image" content="https://yourdomain.com/images/social-preview.jpg">
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="font-body bg-gray-50 text-gray-900 antialiased">
+    <!-- Gradient Background -->
+    <div class="fixed inset-0 -z-10 opacity-10">
+        <img src="images/mesh-gradient.png" alt="" class="w-full h-full object-cover" loading="lazy" width="1200" height="1200">
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-gray-200 shadow-sm">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-heading font-bold text-primary">Nexus</a>
+            
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#features" class="font-medium hover:text-primary transition-colors">Features</a>
+                <a href="#showcase" class="font-medium hover:text-primary transition-colors">Showcase</a>
+                <a href="#contact" class="font-medium hover:text-primary transition-colors">Contact</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+<button id="mobile-menu-button" 
+class="md:hidden p-2 rounded-md text-gray-700 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary"
+aria-label="Toggle menu"
+aria-expanded="false"
+aria-controls="mobile-menu">
+<svg class="h-6 w-6 transition-slow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+</svg>
+</button>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="menu-overlay">
+    <div class="container mx-auto px-6 pt-4 h-full">
+      <!-- REMOVED the duplicate Nexus logo here -->
+      <button id="mobile-menu-close" 
+              class="absolute top-4 right-6 p-2 rounded-md text-gray-700 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary"
+              aria-label="Close menu">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      
+      <nav class="flex flex-col space-y-6 pt-16"> <!-- Added pt-16 for better spacing -->
+        <a href="#features" class="text-xl font-medium text-gray-900 hover:text-primary transition-colors py-3">Features</a>
+        <a href="#showcase" class="text-xl font-medium text-gray-900 hover:text-primary transition-colors py-3">Showcase</a>
+        <a href="#contact" class="text-xl font-medium text-gray-900 hover:text-primary transition-colors py-3">Contact</a>
+      </nav>
+    </div>
+  </div>
+  
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative z-10">
+                    <h1 class="text-5xl md:text-6xl font-heading font-bold leading-tight mb-6">
+                        <span class="block">Design</span>
+                        <span class="block text-primary">Systems</span>
+                    </h1>
+                    <p class="text-xl mb-8 max-w-lg">
+                        Professional design solutions with cutting-edge principles and pixel-perfect execution.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#showcase" class="btn-primary">
+                            View Showcase
+                        </a>
+                        <a href="#features" class="btn-secondary">
+                            Explore Features
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="images/hero/hero-1200.webp">
+                        <source media="(min-width: 769px)" srcset="images/hero/hero-1920.webp">
+                        <img src="images/hero/hero-1920.jpg" 
+                             alt="Modern design workspace" 
+                             class="rounded-xl shadow-2xl border-8 border-white transform transition-transform hover:scale-105"
+                             loading="eager"
+                             width="1920" 
+                             height="1080">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-3xl font-heading font-bold mb-12 text-center">Design Principles</h2>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <article class="feature-card">
+                        <img src="./images/icons/typography.svg" 
+                             alt="Typography system icon"
+                             width="80"
+                             height="80"
+                             class="mb-6">
+                        <h3 class="text-xl font-heading font-semibold mb-3">Typography</h3>
+                        <p class="text-gray-600 mb-4">Perfect font pairing and hierarchy for optimal readability.</p>
+                        <a href="#" class="text-primary font-medium inline-flex items-center group">
+                            Learn more
+                            <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <!-- Feature 2 -->
+                    <article class="feature-card">
+                        <img src="images/icons/color.svg" 
+                             alt="Color system icon"
+                             width="80"
+                             height="80"
+                             class="mb-6">
+                        <h3 class="text-xl font-heading font-semibold mb-3">Color Theory</h3>
+                        <p class="text-gray-600 mb-4">Strategic palettes that enhance brand perception.</p>
+                        <a href="#" class="text-primary font-medium inline-flex items-center group">
+                            Learn more
+                            <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <!-- Feature 3 -->
+                    <article class="feature-card">
+                        <img src="images/icons/layout.svg" 
+                             alt="Layout system icon"
+                             width="80"
+                             height="80"
+                             class="mb-6">
+                        <h3 class="text-xl font-heading font-semibold mb-3">Layout Systems</h3>
+                        <p class="text-gray-600 mb-4">Consistent spacing and grid structures.</p>
+                        <a href="#" class="text-primary font-medium inline-flex items-center group">
+                            Learn more
+                            <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Showcase Section -->
+        <section id="showcase" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-3xl font-heading font-bold mb-12 text-center">Our Work</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="showcase-item">
+                        <img src="images/showcase/project1-800.webp"
+                             srcset="images/showcase/project1-800.webp 1x, images/showcase/project1-1600.webp 2x"
+                             alt="Brand identity project"
+                             width="800"
+                             height="500"
+                             loading="lazy"
+                             class="rounded-lg shadow-md transition-transform hover:scale-[1.02]">
+                    </div>
+                    <div class="showcase-item">
+                        <img src="images/showcase/project2-800.webp"
+                             srcset="images/showcase/project2-800.webp 1x, images/showcase/project2-1600.webp 2x"
+                             alt="Web design project"
+                             width="800"
+                             height="500"
+                             loading="lazy"
+                             class="rounded-lg shadow-md transition-transform hover:scale-[1.02]">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contact" class="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+            <div class="max-w-7xl mx-auto px-6 text-center">
+                <h2 class="text-3xl font-heading font-bold mb-6">Ready to Elevate Your Design?</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">
+                    Let's create something extraordinary together.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="mailto:contact@example.com" class="btn-accent">
+                        Get in Touch
+                    </a>
+                    <a href="#features" class="btn-outline-white">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Footer sections here -->
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p>&copy; 2025 Nexus Design Systems. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/animations.js" defer></script>
+    
+    <!-- Mobile Menu Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.classList.toggle('hidden');
+                
+                // Toggle icon animation
+                mobileMenuButton.querySelector('svg').classList.toggle('rotate-90');
+            });
+        });
+    </script>
+</body>
+</html>
