@@ -68,7 +68,6 @@ Navigation
 Update menu items in both sections:
 
 Desktop:
-html
 <!-- Desktop Menu -->
 <nav class="hidden md:flex space-x-8">
   <a href="#features">Features</a>
