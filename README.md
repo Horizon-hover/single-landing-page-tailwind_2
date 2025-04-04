@@ -67,6 +67,7 @@ tailwind.config = {
 Navigation
 Update menu items in both sections:
 
+Desktop:
 html
 <!-- Desktop Menu -->
 <nav class="hidden md:flex space-x-8">
@@ -74,11 +75,13 @@ html
   <!-- Add more items -->
 </nav>
 
+Mobile:
 <!-- Mobile Menu -->
 <div id="mobile-menu">
   <a href="#features">Features</a>
   <!-- Mirror same items -->
 </div>
+
 Run HTML
 Best Practices Implemented
 ✅ Semantic HTML5
