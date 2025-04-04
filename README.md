@@ -42,12 +42,23 @@ nexus-design/
 1. Clone the repository:
 git clone https://github.com/yourusername/nexus-design.git
 
-2. Install dependencies:
-cd nexus-design
-npm install
+Install dependencies:
 
-3. Start development server:
-npm run
+This current setup works without npm – it’s just HTML/CSS/JS.
+
+npm is optional unless you need:
+
+- Tailwind customization
+
+- Advanced optimizations
+
+- A dev server with hot-reloading
+
+In which case:
+# Only run these if you need to modify Tailwind:
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+npm run build  # Generates optimized CSS
 
 Customization
 Colors
