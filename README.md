@@ -40,7 +40,7 @@ nexus-design/
 ## Installation
 
 1. Clone the repository:
-git clone https://github.com/yourusername/nexus-design.git
+git clone https://github.com/Horizon-hover/single-landing-page-tailwind_2.git
 
 Install dependencies:
 
